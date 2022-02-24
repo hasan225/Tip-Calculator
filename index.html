@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+     
+        <h1>Calculate Your Tip Amount</h1>
+        <form class="form">
+            <div class="input-group">
+                <span class="money-sign">$</span>
+                <input type="number" class="form-control total-bill" id="total-bill" placeholder="Total Bill" />
+            </div>
+
+            <div class="input-group tip">
+                <label for="tip">Tip:</label>
+                <input type="range" class="form-control" id="tipInput" value="0"/>
+                <span class="input-addon" id="tipOutPut"></span>
+            </div>
+
+        </form>
+
+        <hr class="hr">
+
+        <div class="results">
+            <h5>Results</h5>
+            <div class="form-group">
+                <div class="input-group resultSec">
+                    <span class="input-addon" id="tipAmountSpan">Tip Amount:</span>
+                    <input type="number" class="form-control" id="tipAmount" >
+                </div>
+                <div class="input-group BillWithTip resultSec">
+                    <span class="input-addon" id="TotalBillWithTipSpan">Bill With Tip:</span>
+                    <input type="number" class="form-control" id="TotalBillWithTip" disabled>
+                </div>
+            </div>
+        </div>
+     
+        <!-- <div class="article" id="result"></div> -->
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+<!-- 
+    taka sign
+    total bill
+
+    tip range
+    tip span to show the tip amount
+
+    result
+    tip amount
+    total bill with tips
+
+
+
+ -->
