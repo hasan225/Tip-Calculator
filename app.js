@@ -15,8 +15,8 @@ const tipvalue = totalbill * (tip/100);
 tipAmount.value=tipvalue.toFixed(2)
 
 const billWithTip = tipvalue + tip;
-TotalBillWithTip.value=Math.ceil(billWithTip)
-// TotalBillWithTip.value=billWithTip.toFixed(2)
+// TotalBillWithTip.value=Math.ceil(billWithTip)
+TotalBillWithTip.value=billWithTip.toFixed(2)
 
 
 
