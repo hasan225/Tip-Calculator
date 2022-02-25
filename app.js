@@ -1,26 +1,22 @@
-document.querySelector(".form").onchange =function () {
+document.querySelector(".form").onchange = function () {
+  const totalbill = Number(document.querySelector("#total-bill").value);
+  const tip = document.querySelector("#tipInput").value;
+  const tipOutPut = document.querySelector("#tipOutPut");
+  const tipAmount = document.querySelector("#tipAmount");
+  const TotalBillWithTip = document.querySelector("#TotalBillWithTip");
+  const results = document.querySelector(".results");
 
-const totalbill= Number(document.querySelector("#total-bill").value) ;
-const tip=document.querySelector("#tipInput").value;
-const tipOutPut=document.querySelector("#tipOutPut");
-const tipAmount=document.querySelector("#tipAmount");
-const TotalBillWithTip=document.querySelector("#TotalBillWithTip");
-const results=document.querySelector(".results");
+  tipOutPut.innerHTML = `${tip}%`;
+  results.style.display = "block";
 
+  const tipvalue = totalbill * (tip / 100);
+  tipAmount.value = tipvalue.toFixed(2);
 
-tipOutPut.innerHTML=`${tip}%`
-results.style.display="block"
+  const billWithTip = tipvalue + tip;
+  TotalBillWithTip.value = parseFloat(billWithTip).toFixed(2);
 
-const tipvalue = totalbill * (tip/100);
-tipAmount.value=tipvalue.toFixed(2)
+  // TotalBillWithTip.value=Math.ceil(billWithTip)
+  //   TotalBillWithTip.value = billWithTip.toFixed(2);
 
-const billWithTip = tipvalue + tip;
-// TotalBillWithTip.value=Math.ceil(billWithTip)
-TotalBillWithTip.value=billWithTip.toFixed(2)
-
-
-
-
-    tipAmount.innerHTML=`<p>${tipvalue}</p>`
-}
-
+  tipAmount.innerHTML = `<p>${tipvalue}</p>`;
+};
